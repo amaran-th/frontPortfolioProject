@@ -1,0 +1,44 @@
+.content {
+  /*전역변수*/
+  --bg-color: rgb(0, 0, 0);
+  --element-color: rgb(255, 140, 0);
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hourglass {
+  display: block;
+  background-color: var(--bg-color);
+  width: 2em;
+  height: 4em;
+  animation: hourglass 1s linear infinite;
+}
+
+.outer {
+  /*모래시계 테두리*/
+  fill: var(--element-color);
+}
+.middle {
+  /*모래시계 바깥 여백*/
+  fill: var(--bg-color);
+}
+
+@keyframes hourglass {
+  0% {
+    transform: rotate(0deg);
+    box-shadow: inset var(--element-color) 0 -0em 0 0,
+      inset var(--bg-color) 0 -2em 0 0, inset var(--element-color) 0 -4em 0 0;
+  }
+  80% {
+    transform: rotate(0deg);
+    box-shadow: inset var(--element-color) 0 -2em 0 0,
+      inset var(--bg-color) 0 -2em 0 0, inset var(--element-color) 0 -2em 0 0;
+  }
+  100% {
+    transform: rotate(180deg);
+    box-shadow: inset var(--element-color) 0 -2em 0 0,
+      inset var(--bg-color) 0 -2em 0 0, inset var(--element-color) 0 -2em 0 0;
+  }
+}
