@@ -26,6 +26,15 @@ const Header = () => {
         className="m-1 bg-[#aaddaa] h-4 w-4 rounded-lg text-center text-[#00000000]
       hover:px-2 hover:flex-wrap hover:py-1 hover:h-auto hover:w-auto hover:rounded-md hover:text-[#ffffff] }"
         onClick={() => {
+          navigate("/Kim");
+        }}
+      >
+        Kim
+      </div>
+      <div
+        className="m-1 bg-[#aaddaa] h-4 w-4 rounded-lg text-center text-[#00000000]
+      hover:px-2 hover:flex-wrap hover:py-1 hover:h-auto hover:w-auto hover:rounded-md hover:text-[#ffffff] }"
+        onClick={() => {
           navigate("/Lee");
         }}
       >
@@ -39,6 +48,15 @@ const Header = () => {
         }}
       >
         Song
+      </div>
+      <div
+        className="m-1 bg-[#aaaadd] h-4 w-4 rounded-lg text-center text-[#00000000]
+      hover:px-2 hover:flex-wrap hover:py-1 hover:h-auto hover:w-auto hover:rounded-md hover:text-[#ffffff] }"
+        onClick={() => {
+          navigate("/Yim");
+        }}
+      >
+        Yim
       </div>
     </div>
   );
