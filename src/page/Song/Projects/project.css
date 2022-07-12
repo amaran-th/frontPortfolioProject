@@ -1,0 +1,18 @@
+.main {
+  min-height: 20em;
+  display: grid;
+  gap: 0.5em;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  padding: 0 0.5em 0.5em 0.5em;
+}
+.content {
+  border: 2px solid gray;
+  border-radius: 10px;
+  grid-column: span 3 / span 3;
+}
+.description {
+  border: 2px solid gray;
+  border-radius: 10px;
+  grid-column: span 4 / span 4;
+  background-color: white;
+}
