@@ -25,7 +25,7 @@ const Aproject = () => {
             />
           </svg>
         </div>
-        <div className="description">모래시계가 움직이는 로딩화면</div>
+        <div className="description ">모래시계가 움직이는 로딩화면</div>
       </div>
     </>
   )

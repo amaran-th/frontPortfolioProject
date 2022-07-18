@@ -3,8 +3,9 @@ import React from 'react'
 //local
 import './song.css'
 import Aproject from './Projects/Aproject'
+import Bproject from './Projects/Bproject'
 
-const list = [<Aproject />]
+const list = [<Aproject />, <Bproject />]
 const Song = () => {
   return (
     <>
