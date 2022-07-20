@@ -25,6 +25,7 @@ const Lee = () => {
         <div className="flex flex-row">
           {pages.map((idx) => (
             <div
+              key={idx}
               className="py-1 px-4 w-fit bg-white rounded-t-md text-center text-[#609060] text-lg"
               onClick={() => {
                 onclick(idx);
@@ -43,6 +44,12 @@ const Lee = () => {
             {note}
           </div>
         </div>
+      </div>
+      <div>
+        <img
+          src="https://c.tenor.com/smxDF7eQs6EAAAAi/%EB%8B%AC%EB%A6%AC%EB%8A%94%EB%86%8D%EB%8B%B4%EA%B3%B0-joke-bear.gif"
+          alt=""
+        />
       </div>
     </div>
   );

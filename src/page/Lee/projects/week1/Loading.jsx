@@ -1,89 +1,54 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 import "./Loading.css";
+import Dust from "./components/Dust";
+import Text from "./components/Text";
 
 const Week1 = () => {
-  const [circle, setCircleBg] = useState({
-    one: "100",
-    two: "0",
-    three: "0",
-  });
+  const dustRef = useRef();
+  const textRef = useRef();
+  const [dustX, setDustX] = useState();
+  const [dustY, setDustY] = useState();
+  const getPosition = () => {
+    const x = dustRef.current?.offsetLeft;
+    setDustX(x);
+    const y = dustRef.current?.offsetTop;
+    setDustY(y);
+  };
+
   useEffect(() => {
-    const timer = setInterval(() => {
-      if (circle.one === "100") {
-        setCircleBg({
-          one: "50",
-          two: "100",
-          three: "0",
-        });
-      } else if (circle.two === "100") {
-        setCircleBg({
-          one: "10",
-          two: "50",
-          three: "100",
-        });
-      } else if (circle.three === "100") {
-        setCircleBg({
-          one: "0",
-          two: "10",
-          three: "50",
-        });
-      } else if (circle.three === "50") {
-        setCircleBg({
-          one: "0",
-          two: "0",
-          three: "10",
-        });
-      } else if (circle.three === "10") {
-        setCircleBg({
-          one: "100",
-          two: "0",
-          three: "0",
-        });
-      }
-    }, 800);
-    return () => clearInterval(timer);
-  }, [circle]);
+    window.addEventListener("resize", getPosition);
+    getPosition();
+  }, []);
+
+  const repeat = () => {
+    const result = [];
+    for (let i = 0; i < 30; i++) {
+      result.push(
+        <Dust key={i} className="dust" mainX={dustX - 10} mainY={dustY} />
+      );
+    }
+    return result;
+  };
 
   return (
-    <div className="flex flex-row">
-      <div
-        className={`w-2 h-2 m-2 rounded-lg bg-white opacity-${circle.one}`}
-      ></div>
-      <div
-        className={`w-2 h-2 m-2 rounded-lg bg-white opacity-${circle.two}`}
-      ></div>
-      <div
-        className={`w-2 h-2 m-2 rounded-lg bg-white opacity-${circle.three}`}
-      ></div>
+    <div className="main">
+      <div className="ani">
+        <div className="runningMotionGif">
+          <img
+            src="https://c.tenor.com/smxDF7eQs6EAAAAi/%EB%8B%AC%EB%A6%AC%EB%8A%94%EB%86%8D%EB%8B%B4%EA%B3%B0-joke-bear.gif"
+            alt=""
+          />
+        </div>
+        <div className="dust" ref={dustRef}>
+          {repeat()}
+        </div>
+      </div>
+      <div className="text" ref={textRef}>
+        <Text text={"LOADING"} />
+      </div>
     </div>
   );
 };
 
 export default Week1;
-
-const Fader = () => {
-  const [fadeProp, setFadeProp] = useState({
-    fade: "fade-out",
-  });
-
-  useEffect(() => {
-    setInterval(() => {
-      if (fadeProp.fade === "fade-in") {
-        setFadeProp({
-          fade: "fade-out",
-        });
-      } else {
-        setFadeProp({
-          fade: "fade-in",
-        });
-      }
-    }, 2000);
-  }, [fadeProp]);
-
-  return (
-    <div className={fadeProp.fade}>
-      <div className="w-2 h-2 rounded-lg bg-white"></div>
-    </div>
-  );
-};
