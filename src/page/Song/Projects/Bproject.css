@@ -10,6 +10,7 @@
   position: relative;
 }
 .content span {
+  z-index: 99;
   position: absolute;
   top: 50%;
   display: block;
