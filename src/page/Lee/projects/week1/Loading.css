@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bangers&family=Courgette&family=Great+Vibes&family=Kalam:wght@300&family=Mochiy+Pop+One&family=Permanent+Marker&family=Press+Start+2P&family=Satisfy&family=Shadows+Into+Light&display=swap');
+
+.fade-in {
+  transition: opacity 1s ease;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.main {
+  align-items: center;
+  justify-content: center;
+}
+
+.ani {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.runningMotionGif {
+  height: 150px;
+  width: 150px;
+}
+
+.dust {
+  height: 50px;
+  width: 100px;
+}
+
+.dustImg {
+  height: 23px;
+}
+
+.text {
+  height: 50px;
+  width: 100px;
+  text-align: center;
+  margin: 10px auto;
+}
+
+.textOne {
+  font-family: 'Alfa Slab One', cursive;
+}
