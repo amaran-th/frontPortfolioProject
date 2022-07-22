@@ -18,6 +18,7 @@ const Song = () => {
                 <p></p>
                 <span>{index + 1}주차</span>
               </p>
+
               {project}
             </div>
           ))}

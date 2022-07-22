@@ -5,10 +5,24 @@
   grid-template-columns: repeat(7, minmax(0, 1fr));
   padding: 0 0.5em 0.5em 0.5em;
 }
+.frame {
+  border: 2px solid gray;
+  background-color: gray;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  grid-column: span 3 / span 3;
+}
 .content {
   border: 2px solid gray;
   border-radius: 10px;
-  grid-column: span 3 / span 3;
+  height: 100%;
+}
+.stop {
+  margin: 0 auto;
+  display: inline-block;
+  width: fit-content;
+  color: white;
 }
 .description {
   border: 2px solid gray;

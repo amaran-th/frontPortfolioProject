@@ -22,9 +22,9 @@ const Cproject = () => {
     )
   }
   const handleScroll2 = () => {
-    //console.log(document.getElementById('content3').scrollTop)
-    //console.log(document.getElementById('content3').scrollHeight)
-    //console.log(document.getElementById('content3').clientHeight)
+    //document.getElementById('content3').scrollTop
+    //document.getElementById('content3').clientHeight
+    //document.getElementById('content3').scrollHeight
     setElementPercent(
       (100 * Math.floor(document.getElementById('content3').scrollTop)) /
         (document.getElementById('content3').scrollHeight -
@@ -36,6 +36,7 @@ const Cproject = () => {
     //console.log(elementPercent)
   }, [percentScr, elementPercent])
   useEffect(() => {
+    //이벤트 리스너 추가
     window.addEventListener('scroll', handleScroll)
     return () => {
       //이벤트 리스너 제거
@@ -45,28 +46,30 @@ const Cproject = () => {
   return (
     <>
       <div class="main">
-        <div
-          class="content content3"
-          id="content3"
-          onScroll={() => handleScroll2()}
-        >
-          <div class="bar">
-            <div class="percent" style={{ width: percentScr + '%' }}></div>
-          </div>
-          <div class="realContent">
+        <div class="frame">
+          <div
+            class="content content3"
+            id="content3"
+            onScroll={() => handleScroll2()}
+          >
             <div class="bar">
-              <div
-                class="percent"
-                style={{ width: elementPercent + '%' }}
-              ></div>
+              <div class="percent" style={{ width: percentScr + '%' }}></div>
             </div>
-            {example.map(el => (
-              <p key={el}>test{el}</p>
-            ))}
+            <div class="realContent">
+              <div class="bar">
+                <div
+                  class="percent"
+                  style={{ width: elementPercent + '%' }}
+                ></div>
+              </div>
+              {example.map(el => (
+                <p key={el}>test{el}</p>
+              ))}
+            </div>
           </div>
         </div>
         <div className="description">
-          스크롤 위치에 따라 상단 바의 모양이 변화하는 것.
+          스크롤 위치에 따라 상단 바의 색 비율이 변화하는 기능.
         </div>
       </div>
     </>
