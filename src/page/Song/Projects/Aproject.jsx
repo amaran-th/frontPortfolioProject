@@ -8,7 +8,7 @@ const Aproject = () => {
   return (
     <>
       <div class="main">
-        <div class="content">
+        <div class="content content1">
           <svg
             class="hourglass"
             xmlns="http://www.w3.org/2000/svg"

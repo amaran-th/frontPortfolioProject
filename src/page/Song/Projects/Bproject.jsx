@@ -8,7 +8,7 @@ const Bproject = () => {
   return (
     <>
       <div class="main">
-        <div class="content">
+        <div class="content content2">
           <span></span>
           <span></span>
           <span></span>
