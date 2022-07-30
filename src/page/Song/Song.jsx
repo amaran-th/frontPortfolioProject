@@ -5,8 +5,9 @@ import './song.css'
 import Aproject from './Projects/Aproject'
 import Bproject from './Projects/Bproject'
 import Cproject from './Projects/Cproject'
+import Dproject from './Projects/Dproject'
 
-const list = [<Aproject />, <Bproject />, <Cproject />]
+const list = [<Aproject />, <Bproject />, <Cproject />, <Dproject />]
 const Song = () => {
   return (
     <>
