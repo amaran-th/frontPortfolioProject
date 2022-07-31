@@ -1,28 +1,29 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 //local
-import './project.css'
 import './Dproject.css'
 
 const Dproject = () => {
   //const oomooSize = 25 // document.getElementById('oomoo').offsetWidth / 2
-  const container = document.getElementById('content4')
-  const oomoo = document.getElementById('oomoo')
+
+  useEffect(() => {}, [])
 
   const handleMouse = e => {
-    oomoo.style.top = e.clientY - container.getBoundingClientRect().top + 'px'
+    document.getElementById('oomoo').style.top =
+      e.clientY -
+      document.getElementById('content4').getBoundingClientRect().top +
+      'px'
     //현재 보이는 스크린 기준 마우스 위치-현재 보이는 스크린 기준 박스 위치(top)
-    oomoo.style.left = e.clientX - container.getBoundingClientRect().left + 'px'
+    document.getElementById('oomoo').style.left =
+      e.clientX -
+      document.getElementById('content4').getBoundingClientRect().left +
+      'px'
   }
   return (
     <>
       <div class="main">
         <div class="frame">
-          <div
-            class="content content4"
-            id="content4"
-            onMouseMove={e => handleMouse(e)}
-          >
+          <div class="content content4" id="content4" onMouseMove={handleMouse}>
             <img
               id="oomoo"
               src={require('../assets/oomoo.gif')}
