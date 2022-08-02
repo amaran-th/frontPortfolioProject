@@ -19,7 +19,7 @@ function App() {
         <Suspense fallback={<p> 로딩중... </p>}>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/Jang" element={<Jang />} />
+            <Route path="/Jang/*" element={<Jang />} />
             <Route path="/Kim" element={<Kim />} />
             <Route path="/Lee" element={<Lee />} />
             <Route path="/Song" element={<Song />} />

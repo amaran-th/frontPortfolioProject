@@ -4,7 +4,7 @@
     position: relative;
     width: 100%;
     height: 100%;
-    background: #fdd;
+    background: #a5b4fc;
   }
   .lds-spinner div {
     width: 10%;
@@ -16,7 +16,7 @@
   }
   
   .lds-spinner div:nth-child(1) {
-   
+    left: 0%;
     animation-delay: 0.1s;
   }
   .lds-spinner div:nth-child(2) {
@@ -73,6 +73,168 @@
   .seoyun {
     cursor: url(http://www.rw-designer.com/cursor-view/32366.png), auto
   }
-  .seoyun:button:hover {
+  button {
     cursor: url(http://www.rw-designer.com/cursor-view/32368.png), auto
+  }
+
+  .web_button {
+    background-color: #fff;
+    border: 2px;
+    border-style: outset;
+    height: 30px;
+    width: 30px;
+    transition: background-color .4s;
+  }
+  .web_button:hover {
+    background-color: #e2e8f0;
+  }
+  
+  .web_button2 {
+    background-color: #c7d2fe;
+    border: 2px outset ;
+   /* border속성 한방에 가능 */
+    height: 35px;
+    width: 35px;
+    transition: background-color .4s;
+  }
+  .web_button2:hover {
+    background-color: #a5b4fc;
+  }
+
+
+  
+  /* card flip 애니메이션 */
+  .card-container {
+    /* background-color: aquamarine; */
+    width: 220px;
+    height: 320px;
+    perspective: 600px;
+    /* 600px 만큼 떨어진 곳(즉, z축을 따라 600px)에 관찰자가 있다 */
+
+    animation-name: back;
+    animation-duration: 0.5s; 
+    animation-iteration-count: infinite;
+   /* 3d, 원근감 줌 . 원래는 카드 뒤집을때, h,w안움직이나, 이거하면 원근감을 줄 수 있음 */
+    
+  }
+  
+  .card {
+    /* card container(부모)의 3D공간에서 자유롭게 변형 가능 */
+
+    position: relative;
+    /* 안의 card-front가 card안에 위치해야하므로, relative */
+    width: 100%;
+    height: 100%;
+    border: #c7d2fe solid 4px;
+
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    /* perspective속성은 바로 아래 자식요소에만 적용 */
+    /* perspective를 부모로부터 받아 자신을 통과해 자식까지 전달되도록 */
+  }
+
+  /* .card:hover { */
+    /* transform: rotateY(180deg);  */
+    /* hover시 card 180도 돌아가게 */
+  /* } */
+
+  .is-flipped {
+    transform: rotateY(180deg);
+     /* click시 card 180도 돌아가게 */
+ }
+  .card-back {
+    transform: rotateY(180deg);
+   
+    /* Y축을 중심으로 3D회전! => (뒤집힌 것)으로 판단! */
+    /* 이건 뭐나면, 카드 뒷면은 처음부터 180도가 돌아야하기땜에. -> 이걸로 뒷면인지 판단! * /
+    /* 이게 없으면, 핑크빈은 처음부터 앞면에 나와있고, 뒷면은 아예 없는걸로 보임!! */
+    transform-style: preserve-3d;
+  }
+  
+  .card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    /* 이게 뒷면을 숨겨주는 거. 근데 뒷면인지 지가 어케 판별을 하냐? 위에 */
+    /* 이 코드가 없을경우, 핑크빈은 180도 돌아간 그림이 일단 보임. 즉 뒷면(핑크빈)을 가려주지 못하는거임 */
+  }
+
+  .card-front img, .card-back img  {
+    width: 100%;
+    height: 100%;
+    
+  }
+
+  .card-back p {
+    color: #a5b4fc;
+    font-weight: 900;
+    font-size: 1.4rem;
+    top: 80%;
+	  left: 50%;
+    text-align: center;
+	  position: absolute;
+    transform: translate( -50%, -50% );
+    /* 그림위에 글자 위치시키기!  */
+    /* TODO 설명 더적쟝 */
+    transform: translatez(70px);
+  }
+
+  .background{
+    background-color: white;
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+    width: 100%;
+    height: 100%;
+    --tw-border-opacity: 1;
+    border-width: 1px;
+    border-color: rgb(129 140 248 / var(--tw-border-opacity));
+    justify-content: flex-end;
+
+    
+  }
+
+  @keyframes back {
+    50% {
+      background: #eef2ff;
+    }
+  }
+
+  .heart-back {
+  /* width를.. 따로 안주면 margin줘도 안삐져나감! */
+    height: 100%;
+    background-color: #fff;
+    position: relative;
+    
+    margin:10px;
+
+    animation-name: back;
+    animation-duration: 1s; 
+    animation-iteration-count: infinite;
+  }
+
+  .heart {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #c7d2fe;
+    height: 50px;
+    width: 50px;
+    transform: rotate(-45deg);
+    animation-name: beat;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes beat {
+    0% {
+      transform: scale(1) rotate(-45deg);
+    }
+    50% {
+      transform: scale(0.6) rotate(-45deg);
+    }
   }
