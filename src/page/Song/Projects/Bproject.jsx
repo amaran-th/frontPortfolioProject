@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 
 //local
-import './project.css'
 import './Bproject.css'
 
 const Bproject = () => {
