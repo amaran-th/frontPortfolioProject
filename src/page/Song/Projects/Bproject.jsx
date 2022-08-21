@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 
 //local
-import "./project.css";
-import "./Bproject.css";
+import './Bproject.css'
 
 const Bproject = () => {
   const [isPaused, setIsPaused] = useState(false);

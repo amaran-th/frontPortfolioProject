@@ -1,15 +1,15 @@
-import React, { useEffect, lazy, Suspense } from "react";
-import { Route, Routes } from "react-router-dom";
-import { connect } from "react-redux";
+import React, { useEffect, lazy, Suspense } from 'react'
+import { Route, Routes } from 'react-router-dom'
+import { connect } from 'react-redux'
 
-import Header from "shared/Header";
+import Header from 'shared/Header'
 
-const Home = lazy(() => import("page/Home/Home"));
-const Jang = lazy(() => import("page/Jang/Jang"));
-const Kim = lazy(() => import("page/Kim/Kim"));
-const Lee = lazy(() => import("page/Lee/Lee"));
-const Song = lazy(() => import("page/Song/Song"));
-const Yim = lazy(() => import("page/Yim/Yim"));
+const Home = lazy(() => import('page/Home/Home'))
+const Jang = lazy(() => import('page/Jang/Jang'))
+const Kim = lazy(() => import('page/Kim/Kim'))
+const Lee = lazy(() => import('page/Lee/Lee'))
+const Song = lazy(() => import('page/Song/Song'))
+const Yim = lazy(() => import('page/Yim/Yim'))
 
 function App() {
   return (
@@ -28,7 +28,7 @@ function App() {
         </Suspense>
       </>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
 //local
-import './project.css'
 import './Cproject.css'
 
 const example = [
