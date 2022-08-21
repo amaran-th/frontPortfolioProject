@@ -1,23 +1,23 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 
 //local
 import './Bproject.css'
 
 const Bproject = () => {
-  const [isPaused, setIsPaused] = useState(false)
+  const [isPaused, setIsPaused] = useState(false);
 
-  const stopAnimation = e => {
+  const stopAnimation = (e) => {
     if (!isPaused) {
-      for (let i of document.getElementById('Ani2').children) {
-        i.style.animationPlayState = 'paused'
+      for (let i of document.getElementById("Ani2").children) {
+        i.style.animationPlayState = "paused";
       }
     } else {
-      for (let i of document.getElementById('Ani2').children) {
-        i.style.animationPlayState = 'running'
+      for (let i of document.getElementById("Ani2").children) {
+        i.style.animationPlayState = "running";
       }
     }
-    setIsPaused(!isPaused)
-  }
+    setIsPaused(!isPaused);
+  };
   return (
     <>
       <div class="main">
@@ -27,13 +27,8 @@ const Bproject = () => {
             <span></span>
             <span></span>
             <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
           </div>
-          <button class="stop" onClick={e => stopAnimation(e)}>
+          <button class="stop" onClick={(e) => stopAnimation(e)}>
             {isPaused ? (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -70,7 +65,7 @@ const Bproject = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Bproject
+export default Bproject;

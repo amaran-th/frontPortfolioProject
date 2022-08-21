@@ -1,0 +1,72 @@
+
+.square-border {
+    position: relative;
+    width: 150px;
+	height: 100px;
+    background-color: #0f4613;
+    display: flex;
+    justify-items: center;
+    /* border: 3px solid black; */
+	clip-path:  polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)  ;
+   
+}
+.square {
+    display: flex;
+    /* top: 1.5px;
+    left: 1px; */
+    width: 147px;
+	height: 98px;
+    background-color: #77a37a;
+    /* border: 3px solid black; */
+    position: absolute;
+	clip-path:  polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)  ;
+   
+}
+
+.Container{
+    perspective: 5000px;
+    width:600px;
+    height:600px;
+  }
+  
+  .Tiles{
+    width: 100%;
+    height: 100%;
+    transform: rotateX(60deg) rotateY(0deg) rotateZ(45deg);
+    transform-style: preserve-3d;
+  }
+  
+  .title{
+    width:180px;
+    height:180px;
+    float:left;
+    margin:0 10px 10px 0;
+    cursor:pointer;
+    
+    background:#77a37a;
+    transform-style: preserve-3d;
+  }
+  .title img{
+    /* perspective: none; */
+    width:100%;
+    height:100%;
+    /* background: aquamarine;
+   border: #0f4613 solid; */
+   
+    transform: rotateX(-90deg) rotateY(45deg) translateY(-90px);;
+    /* 나무가 발판보다 위쪽에 위치해아하눈데,, 밑에 있음 으아아악 */
+  }
+    
+  .title:hover{
+    background:#485e52;
+    transform: translate3d(0,0,0px);
+    /* box-shadow:30px 30px 10px rgba(0,0,0,0.5);
+    */
+  
+  }
+  
+  .is-hidden {
+    display:none;
+     /* click시 card 180도 돌아가게 */
+ }
+  
