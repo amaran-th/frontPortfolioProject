@@ -70,7 +70,8 @@ const Cproject = () => {
         <div className="description flex flex-col">
           <div className="h-full flex flex-col items-center justify-center p-2">
             <div className="font-bold">
-              스크롤 위치에 따라 상단 바의 색 비율이 변화하는 기능
+              스크롤 위치에 따라 <br />
+              상단 바의 색 비율이 변화하는 기능
             </div>
             <div className="h-full flex items-center text-[rgb(197,148,0)] p-4">
               div 객체 내부를 기준으로 전체 표시 가능한 객체의 높이와 스크롤
