@@ -47,7 +47,7 @@ const Song = () => {
   return (
     <>
       <div className="rootDiv">
-        {/**console.log('test') */}
+        {/**console.log('tㅇㅇㅇest') */}
         <div className="navigation">
           <div id="rotateNav">
             <ul>
