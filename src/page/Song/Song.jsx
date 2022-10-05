@@ -7,6 +7,7 @@ import Bproject from './Projects/Bproject'
 import Cproject from './Projects/Cproject'
 import Dproject from './Projects/Dproject'
 import Eproject from './Projects/Eproject'
+import Fproject from './Projects/Fproject'
 
 const list = [
   <Aproject />,
@@ -14,6 +15,7 @@ const list = [
   <Cproject />,
   <Dproject />,
   <Eproject />,
+  <Fproject />,
 ]
 const navList = [
   '1 - 모래시계',
@@ -21,7 +23,7 @@ const navList = [
   '3 - 스크롤 로딩바',
   '4 - 우무 문어',
   '5 - 네비게이터',
-  '6 - test',
+  '6 - 스크롤 한붓그리기',
   '7 - test',
   '8 - test',
   '9 - test',
