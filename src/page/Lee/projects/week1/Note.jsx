@@ -7,8 +7,9 @@ const Note1 = () => {
         1주차 : 로딩화면 만들기
       </div>
       <div className="w-fit text-white my-3 mx-2">
-        setInterval 과 clearInterval, useState와 useEffect를 이용해 시간이
-        지남에 따라 명도를 달리 함.
+        setInterval 과 clearInterval, useState와 useEffect를 이용해 달릴 때 생기는 먼지를 만듬.
+        <br/>
+        
       </div>
       <div className="w-fit text-white my-3 mx-2">
         매끄럽지 않은 모습이 아쉬움.
