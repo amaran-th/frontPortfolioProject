@@ -65,7 +65,24 @@ const Aproject = () => {
           </button>
         </div>
 
-        <div className="description ">모래시계가 움직이는 로딩화면</div>
+        <div className="description flex flex-col">
+          <div className="h-full flex flex-col items-center justify-center p-2">
+            <div className="font-bold">모래시계가 움직이는 로딩 화면</div>
+            <div className="h-full flex items-center text-[rgb(197,148,0)] p-4">
+              객체의 CSS 속성으로 box-shadow를 주고 값을 변화시키는 방식으로
+              구현하였다.
+              <br />
+              inset 속성으로 적용하여 객체 내부에 그림자가 생기도록 하였다.
+            </div>
+          </div>
+
+          <div className="bg-[rgb(222,215,192)] p-2 rounded-b-md text-xs ">
+            출처 :{' '}
+            <a href="https://codepen.io/tomhazledine/pen/BKrXwJ">
+              https://codepen.io/tomhazledine/pen/BKrXwJ
+            </a>
+          </div>
+        </div>
       </div>
     </>
   )

@@ -83,8 +83,18 @@ const Fproject = () => {
             </svg>
           </div>
         </div>
-        <div className="description">
-          스크롤 위치에 따라 한 선으로 이루어진 그림이 그려지는 인터랙션.
+        <div className="description flex flex-col">
+          <div className="h-full flex flex-col items-center justify-center p-2">
+            <div className="font-bold">
+              스크롤 위치에 따라 한 선으로 이루어진 그림이 그려지는 인터랙션.
+            </div>
+            <div className="h-full flex items-center text-[rgb(197,148,0)] p-4">
+              strokeDasharray 속성을 이용하여 svg 이미지를 dash로 변환하고,
+              stroke-dashoffset(dash를 그릴 시작점의 위치를 정하는 속성) 속성
+              값에 스크롤 비율로 계산한 값을 적용하여 스크롤을 내릴수록 그림이
+              완성되는 것처럼 보이도록 하였다.
+            </div>
+          </div>
         </div>
       </div>
     </>

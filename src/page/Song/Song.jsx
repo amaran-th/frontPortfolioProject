@@ -24,9 +24,6 @@ const navList = [
   '4 - 우무 문어',
   '5 - 네비게이터',
   '6 - 스크롤 한붓그리기',
-  '7 - test',
-  '8 - test',
-  '9 - test',
 ]
 const Song = () => {
   const [currentPage, setCurrentPage] = useState(0)

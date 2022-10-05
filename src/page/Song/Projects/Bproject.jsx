@@ -1,23 +1,23 @@
-import React, { useState } from "react";
+import React, { useState } from 'react'
 
 //local
 import './Bproject.css'
 
 const Bproject = () => {
-  const [isPaused, setIsPaused] = useState(false);
+  const [isPaused, setIsPaused] = useState(false)
 
-  const stopAnimation = (e) => {
+  const stopAnimation = e => {
     if (!isPaused) {
-      for (let i of document.getElementById("Ani2").children) {
-        i.style.animationPlayState = "paused";
+      for (let i of document.getElementById('Ani2').children) {
+        i.style.animationPlayState = 'paused'
       }
     } else {
-      for (let i of document.getElementById("Ani2").children) {
-        i.style.animationPlayState = "running";
+      for (let i of document.getElementById('Ani2').children) {
+        i.style.animationPlayState = 'running'
       }
     }
-    setIsPaused(!isPaused);
-  };
+    setIsPaused(!isPaused)
+  }
   return (
     <>
       <div class="main">
@@ -27,8 +27,13 @@ const Bproject = () => {
             <span></span>
             <span></span>
             <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
           </div>
-          <button class="stop" onClick={(e) => stopAnimation(e)}>
+          <button class="stop" onClick={e => stopAnimation(e)}>
             {isPaused ? (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -58,14 +63,29 @@ const Bproject = () => {
             )}
           </button>
         </div>
-        <div className="description">
-          9개의 정육면체 객체를 만들고, 중앙의 객체가 떠올랐다 가라앉는동안
-          나머지 8개의 객체가 각자 <strong>딜레이</strong>를 가지고 낮게
-          떠올랐다 가라앉는 로딩 애니메이션
+        <div className="description flex flex-col">
+          <div className="h-full flex flex-col items-center justify-center p-2">
+            <div className="font-bold">
+              9개의 상자가 순차적으로 <br />
+              떠올랐다 가라앉는 로딩 화면
+            </div>
+            <div className="h-full flex items-center text-[rgb(197,148,0)] p-4">
+              9개의 정육면체 객체를 만들고, 중앙의 객체가 떠올랐다 가라앉는동안
+              나머지 8개의 객체가 각자 딜레이를 가지고 낮게 떠올랐다 가라앉게
+              하였다.
+            </div>
+          </div>
+
+          <div className="bg-[rgb(222,215,192)] p-2 rounded-b-md text-xs ">
+            출처 :{' '}
+            <a href="https://codepen.io/danielronnkvist/pen/yXVgmX">
+              https://codepen.io/danielronnkvist/pen/yXVgmX
+            </a>
+          </div>
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default Bproject;
+export default Bproject

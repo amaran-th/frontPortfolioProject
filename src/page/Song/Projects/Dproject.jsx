@@ -31,8 +31,18 @@ const Dproject = () => {
             />
           </div>
         </div>
-
-        <div className="description ">마우스를 따라다니는 우무 문어</div>
+        <div className="description flex flex-col">
+          <div className="h-full flex flex-col items-center justify-center p-2">
+            <div className="font-bold">마우스를 따라다니는 우무 문어</div>
+            <div className="h-full flex items-center text-[rgb(197,148,0)] p-4">
+              div 객체 내부를 기준으로 마우스의 위치 성분과 설정해줄 우무 문어
+              gif 이미지 객체의 위치 성분 값을 활용하여 위치를 계산해주었다.
+              <br />
+              이미지의 위치 값이 변화할 때 약간의 딜레이를 가지고 부드럽게
+              따라오도록 transition 속성에 0.5초의 딜레이와 ease-out를 주었다.
+            </div>
+          </div>
+        </div>
       </div>
     </>
   )

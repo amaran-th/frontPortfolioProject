@@ -173,7 +173,6 @@
   grid-column: span 3 / span 3;
   background-color: rgb(243, 233, 207);
   text-align: center;
-  padding: 50% 1em;
   height: calc(60vh + 2.5em);
 }
 
