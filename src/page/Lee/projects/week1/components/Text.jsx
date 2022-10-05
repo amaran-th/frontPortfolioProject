@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react'
 
-import "../Loading.css";
+import '../Loading.css'
 
 const Text = ({ text }) => {
   const fonts = [
@@ -14,27 +14,27 @@ const Text = ({ text }) => {
     "'Press Start 2P', cursive",
     "'Satisfy', cursive",
     "'Shadows Into Light', cursive",
-  ];
-  const [font, setFont] = useState();
-  const [count, setCount] = useState(0);
+  ]
+  const [font, setFont] = useState()
+  const [count, setCount] = useState(0)
   useEffect(() => {
     const timer = setInterval(() => {
-      setCount(count + 1);
-      setFont(fonts[Math.floor(Math.random() * fonts.length)]);
-    }, 150);
-    console.log(font);
-    return () => clearInterval(timer);
-  }, [count]);
+      setCount(count + 1)
+      setFont(fonts[Math.floor(Math.random() * fonts.length)])
+    }, 150)
+    //console.log(font);
+    return () => clearInterval(timer)
+  }, [count])
 
   const style = {
     fontFamily: font,
-  };
+  }
 
   return (
     <div className="textOne" style={style}>
       {text}
     </div>
-  );
-};
+  )
+}
 
-export default Text;
+export default Text

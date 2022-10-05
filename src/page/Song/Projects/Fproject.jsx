@@ -15,7 +15,7 @@ const Fproject = () => {
   const calcDashoffset = (scrollY, element, length) => {
     const ratio = scrollY / (element.scrollHeight - element.clientHeight)
     const value = length - length * ratio
-    console.log(value)
+    //console.log(value)
     return value < 0 ? 0 : value > length ? length : value
   }
 
