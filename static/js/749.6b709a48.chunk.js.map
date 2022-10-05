@@ -1,1 +1,0 @@
-{"version":3,"file":"static/js/749.6b709a48.chunk.js","mappings":"iIAMA,UAJa,WACX,OAAO","sources":["page/Home/Home.jsx"],"sourcesContent":["import React from \"react\";\r\n\r\nconst Home = () => {\r\n  return <div>여기는 홈 입니다.</div>;\r\n};\r\n\r\nexport default Home;\r\n"],"names":[],"sourceRoot":""}

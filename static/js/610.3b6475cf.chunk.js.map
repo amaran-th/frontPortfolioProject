@@ -1,1 +1,0 @@
-{"version":3,"file":"static/js/610.3b6475cf.chunk.js","mappings":"iIAMA,UAJa,WACX,OAAO","sources":["page/Kim/Kim.jsx"],"sourcesContent":["import React from \"react\";\r\n\r\nconst Song = () => {\r\n  return <div>김명서의 페이지 입니다!</div>;\r\n};\r\n\r\nexport default Song;\r\n"],"names":[],"sourceRoot":""}
