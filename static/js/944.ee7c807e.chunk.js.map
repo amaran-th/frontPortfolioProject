@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/944.ee7c807e.chunk.js","mappings":"iIAMA,UAJa,WACX,OAAO","sources":["page/Jang/Jang.jsx"],"sourcesContent":["import React from \"react\";\r\n\r\nconst Jang = () => {\r\n  return <div>장서윤의 페이지 입니다!</div>;\r\n};\r\n\r\nexport default Jang;\r\n"],"names":[],"sourceRoot":""}

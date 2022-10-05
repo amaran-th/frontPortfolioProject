@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/174.7f9534c7.chunk.js","mappings":"iIAMA,UAJa,WACX,OAAO","sources":["page/Yim/Yim.jsx"],"sourcesContent":["import React from \"react\";\r\n\r\nconst Song = () => {\r\n  return <div>임연후의 페이지 입니다!</div>;\r\n};\r\n\r\nexport default Song;\r\n"],"names":[],"sourceRoot":""}
