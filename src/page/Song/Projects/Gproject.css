@@ -1,0 +1,7 @@
+.content7 {
+  --bg-color: rgb(255, 255, 255);
+  --element-color: rgb(255, 140, 0);
+  background-color: var(--bg-color);
+  max-height: 20em;
+  overflow-y: auto;
+}

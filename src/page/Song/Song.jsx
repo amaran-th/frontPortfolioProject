@@ -8,6 +8,7 @@ import Cproject from './Projects/Cproject'
 import Dproject from './Projects/Dproject'
 import Eproject from './Projects/Eproject'
 import Fproject from './Projects/Fproject'
+import Gproject from './Projects/Gproject'
 
 const list = [
   <Aproject />,
@@ -16,6 +17,7 @@ const list = [
   <Dproject />,
   <Eproject />,
   <Fproject />,
+  <Gproject />,
 ]
 const navList = [
   '1 - 모래시계',
@@ -24,6 +26,7 @@ const navList = [
   '4 - 우무 문어',
   '5 - 네비게이터',
   '6 - 스크롤 한붓그리기',
+  '7 - D3',
 ]
 const Song = () => {
   const [currentPage, setCurrentPage] = useState(0)
